@@ -31,6 +31,14 @@ export class TerminalUI {
 
   doLS() {
     this.socket.emit("input", "ls\n");
+  } //export const runCommand = (command: string) => terminal?.runCommand(command);
+
+  runCommand(command: string, enter: boolean) {
+    if (enter) {
+      this.socket.emit("input", `${command}${`\n`}`);
+    } else {
+      this.socket.emit("input", `${command}`);
+    }
   }
 
   /**

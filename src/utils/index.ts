@@ -28,6 +28,8 @@ function startTerminal(container: any, socket: any) {
 }
 
 export const doLS = () => terminal?.doLS();
+export const runCommand = (command: string, enter = true) =>
+  terminal?.runCommand(command, enter);
 
 export function start() {
   const container = document.getElementById("terminal-container");
