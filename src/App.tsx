@@ -50,7 +50,7 @@ const App = () => {
           Ctrl something
         </button> */}
 
-        {/* <button onClick={() => runCommand("^x")}>command x?</button> */}
+        <button onClick={() => runCommand("\x18", false)}>command x?</button>
         <div id="terminal-container" style={{ width: "100%" }}></div>
         <p></p>
       </header>
